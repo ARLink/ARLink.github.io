@@ -1,0 +1,183 @@
+
+/*========== GLOBAL ELEMENTS ==========*/
+body{
+	/* Background pattern from subtlepatterns.com */
+	background: url(../img/dark_embroidery.png) fixed;
+	font-family: calibri;
+}
+
+/*========== Containers ==========*/
+#portfolio{
+	height: 500px;
+}
+
+#portrait{
+	max-width: 130px;
+}
+
+#navLogo{
+	max-height: 70px;
+}
+
+.panel{
+	background: url(../img/triangular.png) fixed;
+	display: block;
+	position: relative;
+	padding:20px
+}
+
+.horizontal{
+	width: 100%;
+	height: 70px;
+	background-color: white;
+}
+
+.navBar{
+	margin-bottom: 20px;
+	overflow: visible;
+}
+
+.navBar-fixed-top{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	margin-bottom: 0;
+}
+
+.navList{
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+	list-style-type: none;
+    margin: 0 10px 0 0;
+}
+
+.navListItem{
+	display: inline;
+}
+
+.footer-fixed-bottom{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	margin-bottom: 0;
+}
+
+.footerListItem{
+	display: inline;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+/*========== COLORS ==========*/
+.pColor{
+	background-color: #e60033;
+}
+
+.sColor{
+	background-color: #ffffff;
+}
+
+.pColor-text{
+	color: #e60033;
+}
+
+.sColor-text{
+	color: #ffffff;;
+}
+
+.black-text{
+	color: black;
+}
+
+/*========== CUSTOM HELPER CLASSES ==========*/
+.padding-top{
+	padding-top: 40px;
+}
+
+.padding-top-small{
+	padding-top: 10px;
+}
+
+.padding-right{
+	padding-right: 40px;
+}
+
+.padding-right-small{
+	padding-right: 10px;
+}
+
+.padding-left{
+	padding-left: 40px;
+}
+
+.padding-left-small{
+	padding-left: 10px;
+}
+
+.padding-bottom{
+	padding-bottom: 40px;
+}
+
+.padding-bottom-small{
+	padding-bottom: 10px;
+}
+
+.margin-top{
+	margin-top: 40px;
+}
+
+.margin-top-small{
+	margin-top: 10px;
+}
+
+.margin-bottom{
+	margin-bottom: 40px;
+}
+
+.margin-bottom-small{
+	margin-bottom: 10px;
+}
+
+.border-top{
+	border-top: solid 1px #e7e7e7;
+}
+
+.border-bottom{
+	border-bottom: solid 1px #e7e7e7;
+}
+
+.title-text{
+	font-size: 72px;
+	font-weight: bold;
+}
+
+.box-shadow{
+	box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+.box-shadow-top{
+	box-shadow: 0 -5px 5px rgba(0,0,0,.2);
+}
+
+.pull-right{
+	text-align: right;
+}
+
+.pull-left{
+	text-align: left;
+}
+
+.opaque{
+	opacity: .75;
+}
+
+.logo-link{
+	height:50px;
+	width:50px;
+}
