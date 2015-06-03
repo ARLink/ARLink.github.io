@@ -1,58 +1,24 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>ARLink</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="ARLink - Web design by Agustin Rivera-Longoria for the modern world.">
-		<meta name="keywords" content="Agustin, Rivera-Longoria, Modern, Web, Design, Development, UI, UX, Austin, Texas">
-		<link rel="stylesheet" href="lib\bootstrap.min.css" />
-		<link rel="stylesheet" type="text\css" href="lib\styleSheet.css">
-	</head>
+<html ng-app="portfolio">
 
-	<body data-ng-app="portfolio" id="pageTop">
-		<div data-ng-controller="mainController">
-			<div class="horizontal navBar navBar-fixed-top">
-				<div class="navListItem padding-left">
-					<a href="index.html"><img id="navLogo" class="responsive" data-ng-src="img\ARLink_Logo.png"\></a>
-				</div>
-				<div class="container navListItem">
-					<ul class="navList">
-						<li class="navListItem padding-right-small"><a>About Me</a></li>
-						<li class="navListItem"><a>Hire Me</a></li>
-					</ul>
-				</div>
-			</div>
-			<br>
-			<div id="title" class="sColor padding-top padding-bottom text-center box-shadow-top border-top">
-				<div class="container">
-					<div class="row margin-top">
-						<div class="col-xs-12 col-sm-3">
-							<img id="portrait" data-ng-class="{'responsive pull-right' : navMode == 'full'}" data-ng-src="img\portfolio_picture.png"/>
-						</div>
-						<div class="col-xs-12 col-sm-8" data-ng-class="{'margin-top' : navMode == 'full'}">
-							<h1 class="">Agustin Rivera-Longoria</h1>
-							<p class="lead"><strong>-- your Link to web design and development for the modern world --</strong></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-			<div id="footer" class="footer-fixed-bottom sColor box-shadow-top border-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-6">
-							
-						</div>
-						<span class="col-xs-12 col-sm-6 pull-right"><h5 class=""><strong>&copy; 2015 Agustin Rivera-Longoria</strong></h5></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+	<head>
+		<meta charset="UTF-8">
+		<title>My AngularJS App</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#/home">view1</a></li>
+			<li><a href="#/contact">view2</a></li>
+		</ul>
+
+		<div ng-view></div>
+		  
 		<script src="lib\jquery-1.11.3.min.js"></script>
 		<script src="lib\bootstrap.min.js"></script>
-		<script src="lib\angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
 		<script src="app.js"></script>
+		<script src="partials/contact/contactCtrl.js"></script>
+		<script src="partials/home/homeCtrl.js"></script>
 	</body>
 </html>
