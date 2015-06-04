@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portfolio', [])
+angular.module('portfolio')
 .controller('ContactCtrl', ['$scope', function($scope) {
 
 }]);
