@@ -15,7 +15,7 @@ app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
-app.controller('appCtrl', function($scope) {
+app.controller('appCtrl', ['$scope', function($scope) {
 	//Variables and Objects
 	$scope.navMode = 'full';	
 	//Helper Functions
@@ -40,4 +40,4 @@ app.controller('appCtrl', function($scope) {
 			console.log("navMode: ", $scope.navMode);
 		});
 	});
-});
+}]);
