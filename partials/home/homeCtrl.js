@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portfolio', [])
+angular.module('portfolio')
 .controller('HomeCtrl', ['$scope', function($scope) {
 	
 }]);
