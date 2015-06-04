@@ -1,12 +1,12 @@
 'use strict';
 
-var app = angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.aboutMe','portfolio.contact']);
+var app = angular.module('portfolio', ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
-app.controller('appCtrl', function($scope) {
+app.controller('app', function($scope) {
 	//Variables and Objects
 	$scope.navMode = 'full';	
 	//Helper Functions
