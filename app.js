@@ -1,20 +1,12 @@
 'use strict';
 
-var app = angular.module('portfolio', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider){
-	$routeProvider.when('/home', {
-		templateUrl: 'partials/home/home.html',
-		controller: 'homeCtrl'
-	});
-	$routeProvider.when('/contact', {
-		templateUrl: 'partials/contact/contact.html',
-		controller: 'contactCtrl'
-	});
-	$routeProvider.otherwise({redirectTo: '/home'});
-}])
-
-.controller('app', function($scope) {
+var app = angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.contact']);
+ 
+app.config(['$routeProvider', function($routeProvider){
+ 	$routeProvider.otherwise({redirectTo: '/home'});
+}]);
+ 
+app.controller('app', function($scope) {
 	//Variables and Objects
 	$scope.navMode = 'full';	
 	//Helper Functions
@@ -38,5 +30,5 @@ var app = angular.module('portfolio', ['ngRoute'])
 			};
 			console.log("navMode: ", $scope.navMode);
 		});
-	});	
-}]);
+	});
+});
