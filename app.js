@@ -14,7 +14,7 @@ var app = angular.module('portfolio', ['ngRoute'])
 	$routeProvider.otherwise({redirectTo: '/home'});
 }])
 
-.controller('appCtrl', function($scope) {
+.controller('app', function($scope) {
 	//Variables and Objects
 	$scope.navMode = 'full';	
 	//Helper Functions
