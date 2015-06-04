@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.aboutMe','portfolio.contact']);
+var app = angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.contact']);
 
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.otherwise({redirectTo: '/home'});
