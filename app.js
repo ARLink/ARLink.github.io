@@ -6,11 +6,11 @@ app.config(['$routeProvider', function($routeProvider){
 	// Adding this to test
 	$routeProvider.when('/home', {
 		templateUrl: 'partials/home/home.html',
-		controller: 'HomeCtrl'
+		controller: 'homeCtrl'
 	});
 	$routeProvider.when('/contact', {
 		templateUrl: 'partials/contact/contact.html',
-		controller: 'ContactCtrl'
+		controller: 'contactCtrl'
 	});
 	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
