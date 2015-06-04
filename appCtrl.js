@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module('portfolio', ['ngRoute']);
+var app = angular.module('portfolio', ['ngRoute'])
 
-app.config(['$routeProvider', function($routeProvider){
+.config(['$routeProvider', function($routeProvider){
 	$routeProvider.when('/home', {
 		templateUrl: 'partials/home/home.html',
 		controller: 'homeCtrl'
@@ -12,9 +12,9 @@ app.config(['$routeProvider', function($routeProvider){
 		controller: 'contactCtrl'
 	});
 	$routeProvider.otherwise({redirectTo: '/home'});
-}]);
+}])
 
-app.controller('appCtrl', ['$scope', function($scope) {
+.controller('appCtrl', ['$scope', function($scope) {
 	//Variables and Objects
 	$scope.navMode = 'full';	
 	//Helper Functions
