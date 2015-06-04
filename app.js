@@ -3,6 +3,15 @@
 var app = angular.module('portfolio', ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
+	// Adding this to test
+	$routeProvider.when('/home', {
+		templateUrl: 'partials/home/home.html',
+		controller: 'HomeCtrl'
+	});
+	$routeProvider.when('/contact', {
+		templateUrl: 'partials/contact/contact.html',
+		controller: 'ContactCtrl'
+	});
 	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
