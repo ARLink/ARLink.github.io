@@ -4,6 +4,7 @@ body{
 	/* Background pattern from subtlepatterns.com */
 	background: url(../img/dark_embroidery.png) fixed;
 	font-family: calibri;
+	padding-top: 160px;
 }
 
 /*========== Containers ==========*/
@@ -33,8 +34,7 @@ body{
 }
 
 .navBar{
-	margin-bottom: 20px;
-	overflow: visible;
+	background-color: white;
 }
 
 .navBar-fixed-top{
@@ -96,8 +96,8 @@ body{
 }
 
 /*========== CUSTOM HELPER CLASSES ==========*/
-.padding-top{
-	padding-top: 40px;
+.padding-top-large{
+	padding-top: 100px;
 }
 
 .padding-top-small{
@@ -120,7 +120,11 @@ body{
 	padding-left: 10px;
 }
 
-.padding-bottom{
+.padding-bottom-large{
+	padding-bottom: 100px;
+}
+
+.padding-bottom-medium{
 	padding-bottom: 40px;
 }
 

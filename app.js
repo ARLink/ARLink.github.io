@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.contact'
-])
-.config(['$routeProvider', function($routeProvider){
+var app = angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.aboutMe','portfolio.contact']);
+
+app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.otherwise({redirectTo: '/home'});
-}])
-.controller('appCtrl', [function($scope) {
+}]);
+
+app.controller('appCtrl', function($scope) {
 	//Variables and Objects
-	$scope.navMode = 'full';
-	
+	$scope.navMode = 'full';	
 	//Helper Functions
 	var isMobile = function(){
 		if($(window).width() < 765){
@@ -17,12 +17,10 @@ angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.contact'
 			return false;
 		};
 	};
-	
 	//Init
 	if(isMobile()){
 		$scope.navMode = 'mobile';
 	}
-	
 	$(window).resize(function(){
 		$scope.$apply(function(){
 			if(isMobile()){
@@ -30,6 +28,7 @@ angular.module('portfolio', ['ngRoute','portfolio.home','portfolio.contact'
 			}else{
 				$scope.navMode = 'full';
 			};
+			console.log("navMode: ", $scope.navMode);
 		});
 	});
-}]);
+});

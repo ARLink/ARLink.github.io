@@ -8,5 +8,5 @@ angular.module('portfolio.home', ['ngRoute'])
 	});
 }])
 .controller('HomeCtrl', [function() {
-
+	
 }]);
