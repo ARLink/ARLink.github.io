@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('portfolio')
-.controller('AboutCtrl', [function() {
-	
+.controller('aboutCtrl', ['$scope', function($scope) {
+
 }]);

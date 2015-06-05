@@ -30,34 +30,25 @@ app.controller('app', function($scope) {
 			return false;
 		};
 	};
-	
-/* 	var el = document.getElementById('menu-icon');
 
-	el.onclick = function() {
-		if(document.getElementById('menu').className == "showMenu") {
-			document.getElementById('menu').className = "hideMenu";
-		}
-		else {
-			document.getElementById('menu').className = "showMenu";
-		}
-	}; */
 	
-	$(function() {
-		var menuVisible = false;
-		$('#menu-icon').click(function() {
-			if (menuVisible) {
-				$('#menu').css({'display':'none'});
-				menuVisible = false;
-				return;
-			}
-			$('#menu').css({'display':'block'});
-			menuVisible = true;
-		});
-		$('#menu').click(function() {
+	var menuVisible = false;
+	$('#menu-icon').click(function() {
+		if (menuVisible) {
+			$('#menu').css({'display':'none'});
+			menuVisible = false;
+			return;
+		}
+		$('#menu').css({'display':'block'});
+		menuVisible = true;
+	});
+	$('#menu').click(function() {
+		if(isMobile()){
 			$(this).css({'display':'none'});
 			menuVisible = false;
-		});
+		}
 	});
+	
 	
 	//Init
 	if(isMobile()){
@@ -69,6 +60,7 @@ app.controller('app', function($scope) {
 				$scope.navMode = 'mobile';
 			}else{
 				$scope.navMode = 'full';
+				$('#menu').css({'display':'block'});
 			};
 			console.log("navMode: ", $scope.navMode);
 		});

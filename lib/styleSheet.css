@@ -112,7 +112,9 @@ a{
 	color: black;
 	text-decoration: none;
 	font-weight: bold;
-}
+	width: 200px;
+	height: 40px
+;}
 
 a:hover{
 	color: grey;
