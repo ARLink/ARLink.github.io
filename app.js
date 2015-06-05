@@ -30,6 +30,18 @@ app.controller('app', function($scope) {
 			return false;
 		};
 	};
+	
+	var el = document.getElementById('menu-icon');
+
+	el.onclick = function() {
+		if(document.getElementById('menu').className == "showMenu") {
+			document.getElementById('menu').className = "hideMenu";
+		}
+		else {
+			document.getElementById('menu').className = "showMenu";
+		}
+	};
+	
 	//Init
 	if(isMobile()){
 		$scope.navMode = 'mobile';

@@ -124,6 +124,13 @@ a:hover#menu-icon{
 	
 }
 
+.showMenu{
+	display: block;
+}
+
+.hideMenu{
+	display: none;
+}
 
 /*========== COLORS ==========*/
 .pColor{
@@ -172,10 +179,6 @@ a:hover#menu-icon{
 		width: 100%;
 		padding: 10px 0;
 		margin: 0;
-	}
-
-	nav:hover ul {
-		display: block;
 	}
 }
 
