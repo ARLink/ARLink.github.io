@@ -10,31 +10,21 @@
 		<link rel="stylesheet" type="text\css" href="lib\styleSheet.css">
 	</head>
 	<body ng-controller="app">
-		<div class="navbar navBar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<div class="nav navbar-nav">
-						<button data-ng-if="navMode == 'mobile'" type="button" data-ng-class="{'btn btn-navbar pull-right': navMode == 'mobile'}" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					
-						<ul class="nav navbar-nav brand"><a href="#/home">
-							<li></li><img id="navLogo" class="responsive" data-ng-src="img\ARLink_Logo.png"\></a></li>
-						</ul>
-						<div data-ng-class="{'nav-collapse collapse' : navMode == 'mobile'}">
-							<ul class="nav navbar-nav budget">
-								<li><a href="#/about">About Me</a></li>
-								<li><a href="#/contact">Contact Information</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<header>
+			<a href="#" id="navLogo"></a>
+			<nav>
+				<a href="#" id="menu-icon"></a>
+				<ul>
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/about">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+	
 		<div ng-view></div>
-		<div id="footer" class="footer-fixed-bottom sColor box-shadow-top border-top">
+		<div id="footer" class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6">

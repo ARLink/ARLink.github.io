@@ -4,7 +4,6 @@ body{
 	/* Background pattern from subtlepatterns.com */
 	background: url(../img/dark_embroidery.png) fixed;
 	font-family: calibri;
-	padding-top: 160px;
 }
 
 /*========== Containers ==========*/
@@ -17,7 +16,40 @@ body{
 }
 
 #navLogo{
-	max-height: 70px;
+	margin: 20px;
+	float: left;
+	height: 40px;
+	background: url(../img/Panel_Logo.png) no-repeat center;
+	display: block;
+}
+
+#menu-icon{
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(../img/Menu_Icon.png) no-repeat center;
+}
+
+header{
+	background: white;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid black;
+	z-index: 100;
+}
+
+.footer{
+	background: white;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 4px solid black;
+	z-index: 100;
 }
 
 .panel{
@@ -33,8 +65,9 @@ body{
 	background-color: white;
 }
 
-.navBar{
-	background-color: white;
+nav{
+	float: right;
+	padding: 20px;
 }
 
 .navBar-fixed-top{
@@ -46,17 +79,18 @@ body{
 	margin-bottom: 0;
 }
 
-.navList{
-	position: relative;
-	left: 0;
-	display: block;
-	float: left;
-	list-style-type: none;
-    margin: 0 10px 0 0;
+ul{
+	list-style: none;
 }
 
-.navListItem{
-	display: inline;
+li{
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+
+.current{
+	color: #2262AD;
 }
 
 .footer-fixed-bottom{
@@ -73,6 +107,23 @@ body{
 	margin-top: 10px;
 	font-size: 14px;
 }
+
+a{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	color: grey;
+}
+
+a:hover#menu-icon{
+	background-color: white;
+	border-radius: 4px 4px 0 0;
+	
+}
+
 
 /*========== COLORS ==========*/
 .pColor{
@@ -93,6 +144,39 @@ body{
 
 .black-text{
 	color: black;
+}
+/*========== CUSTOM MEDIA QUERIES ==========*/
+@media only screen and (max-width : 640px) {
+	header{
+		position: absolute;
+	}
+	
+	#menu-icon {
+		display: inline-block;
+	}
+	
+	nav ul, nav:active ul{
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+	
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
 }
 
 /*========== CUSTOM HELPER CLASSES ==========*/

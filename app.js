@@ -8,6 +8,10 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'partials/home/home.html',
 		controller: 'homeCtrl'
 	});
+	$routeProvider.when('/about', {
+		templateUrl: 'partials/about/about.html',
+		controller: 'aboutCtrl'
+	});
 	$routeProvider.when('/contact', {
 		templateUrl: 'partials/contact/contact.html',
 		controller: 'contactCtrl'
