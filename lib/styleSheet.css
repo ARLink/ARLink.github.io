@@ -129,7 +129,7 @@ a:hover#menu-icon{
 }
 
 .hideMenu{
-	display: none;
+	display: hidden;
 }
 
 /*========== COLORS ==========*/

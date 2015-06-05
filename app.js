@@ -31,7 +31,7 @@ app.controller('app', function($scope) {
 		};
 	};
 	
-	var el = document.getElementById('menu-icon');
+/* 	var el = document.getElementById('menu-icon');
 
 	el.onclick = function() {
 		if(document.getElementById('menu').className == "showMenu") {
@@ -40,7 +40,24 @@ app.controller('app', function($scope) {
 		else {
 			document.getElementById('menu').className = "showMenu";
 		}
-	};
+	}; */
+	
+	$(function() {
+		var menuVisible = false;
+		$('#menu-icon').click(function() {
+			if (menuVisible) {
+				$('#menu').css({'display':'none'});
+				menuVisible = false;
+				return;
+			}
+			$('#menu').css({'display':'block'});
+			menuVisible = true;
+		});
+		$('#menu').click(function() {
+			$(this).css({'display':'none'});
+			menuVisible = false;
+		});
+	});
 	
 	//Init
 	if(isMobile()){
