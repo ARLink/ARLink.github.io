@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('portfolio')
-.controller('aboutCtrl', ['$scope', function($scope) {
+.controller('workCtrl', ['$scope', function($scope) {
+	
 	$(document).ready(function() {
 		if($scope.navMode == 'mobile') {
 			$(".content").toggle();
@@ -9,11 +10,11 @@ angular.module('portfolio')
 		
 		$(".heading").click(function() {
 			if($scope.navMode == 'mobile') {
-				if(this.id == 'aboutHeader') {
-					$("#aboutContent").slideToggle("fast");
+				if(this.id == 'projectHeader') {
+					$("#projectContent").slideToggle("fast");
 				} 
-				else if(this.id == 'contactHeader') {
-					$('#contactContent').slideToggle("fast");
+				else if(this.id == 'sampleHeader') {
+					$('#sampleContent').slideToggle("fast");
 				};
 			};
 		});

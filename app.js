@@ -12,9 +12,9 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'partials/about/about.html',
 		controller: 'aboutCtrl'
 	});
-	$routeProvider.when('/contact', {
-		templateUrl: 'partials/contact/contact.html',
-		controller: 'contactCtrl'
+	$routeProvider.when('/work', {
+		templateUrl: 'partials/work/work.html',
+		controller: 'workCtrl'
 	});
 	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
@@ -31,22 +31,23 @@ app.controller('app', function($scope) {
 		};
 	};
 
-	
-	var menuVisible = false;
-	$('#menu-icon').click(function() {
-		if (menuVisible) {
-			$('#menu').css({'display':'none'});
-			menuVisible = false;
-			return;
-		}
-		$('#menu').css({'display':'block'});
-		menuVisible = true;
-	});
-	$('#menu').click(function() {
-		if(isMobile()){
-			$(this).css({'display':'none'});
-			menuVisible = false;
-		}
+	$(function() {
+		var menuVisible = false;
+		$('#menu-icon').click(function() {
+			if (menuVisible) {
+				$('#menu').css({'display':'none'});
+				menuVisible = false;
+				return;
+			}
+			$('#menu').css({'display':'block'});
+			menuVisible = true;
+		});
+		$('#menu').click(function() {
+			if($scope.navMode == 'mobile'){
+				$(this).css({'display':'none'});
+				menuVisible = false;
+			};
+		});
 	});
 	
 	
@@ -58,11 +59,12 @@ app.controller('app', function($scope) {
 		$scope.$apply(function(){
 			if(isMobile()){
 				$scope.navMode = 'mobile';
-			}else{
+				$('.content').css({'display':'none'});
+			}else if(!isMobile()){
 				$scope.navMode = 'full';
 				$('#menu').css({'display':'block'});
+				$('.content').css({'display':'block'});
 			};
-			console.log("navMode: ", $scope.navMode);
 		});
 	});
 });
